@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análise de Automação</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <button class="toggle-mode" onclick="toggleMode()">🌗 Alternar Tema</button>
+
+  <div class="container">
+    <h1>Devo Automatizar Esta Tarefa?</h1>
+
+    
+    <form id="taskForm" class="form-grid">
+      <label>Nome da Tarefa:
+        <input type="text" id="nomeTarefa" required>
+      </label>
+      <label>Frequência (vezes/dia):
+        <input type="number" id="frequencia" required>
+      </label>
+      <label>Tempo (min):
+        <input type="number" id="tempo" required>
+      </label>
+      <label>Complexidade:
+        <select id="complexidade" required>
+          <option value="baixa">Baixa</option>
+          <option value="media">Média</option>
+          <option value="alta">Alta</option>
+        </select>
+      </label>
+      <label>Importância:
+        <select id="importancia" required>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
+      </label>
+      <label>Urgência:
+        <select id="urgencia" required>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
+      </label>
+      <label>Ferramentas (Qtd):
+        <input type="number" id="ferramentas" required>
+      </label>
+      <label>Volume (linhas/registros):
+        <input type="number" id="volume" required>
+      </label>
+      <label>Nº de Colaboradores:
+        <input type="number" id="colaboradores" required>
+      </label>
+
+      <button type="submit" class="btn">⚡ Avaliar</button>
+    </form>
+
+    
+    <div id="resultado" class="resultado"></div>
+
+    
+    <h2>📜 Histórico de Avaliações</h2>
+    <div id="historico"></div>
+    <button onclick="exportarPDF()" class="btn secondary">📑 Exportar PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
