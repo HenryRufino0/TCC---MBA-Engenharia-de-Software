@@ -18,7 +18,7 @@ BASE_COLS = [
     "frequencia",
     "tempo",
     "complexidade",  
-    "importancia",   # Essa aqui desconsiderei
+    "importancia",   # Essa aqui eu desconsiderei
     "urgencia",      
     "ferramentas",
     "volume",
