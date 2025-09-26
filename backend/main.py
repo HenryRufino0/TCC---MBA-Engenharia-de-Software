@@ -38,7 +38,7 @@ def avaliar_automacao(input: TaskInput):
 @app.on_event("startup")
 def treinar_base_padrao():
     try:
-        
+        # agora busca direto no banco
         df = load_automation_data()
         tree.train(df)
         print("✅ Modelo treinado com dados do banco")

@@ -4,19 +4,16 @@ import mysql.connector
 
 DB_CONFIG = {
     "host": "127.0.0.1",
-    "port": 3307,           
-    "user": "root",        
+    "port": 3307,            
+    "user": "root",          
     "password": "", 
     "database": "tcc"       
 }
 
-
 df = pd.read_csv("data/automation_data.csv")
-
 
 conn = mysql.connector.connect(**DB_CONFIG)
 cursor = conn.cursor()
-
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS automation_data (
@@ -32,7 +29,6 @@ CREATE TABLE IF NOT EXISTS automation_data (
     automatizar ENUM('sim', 'não') NOT NULL
 );
 """)
-
 
 for _, row in df.iterrows():
     cursor.execute("""

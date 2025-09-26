@@ -15,5 +15,7 @@
     1.0,
     0.0
   ],
-  "tau_youden": 1.0
+  "tau_youden_holdout": 1.0,
+  "sens_at_tau": 1.0,
+  "spec_at_tau": 0.9090909090909091
 }

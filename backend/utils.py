@@ -19,7 +19,7 @@ def load_automation_data():
     df = pd.read_sql(query, conn)
     conn.close()
 
-    
+    # Renomear para os nomes que o modelo espera
     df = df.rename(columns={
         "tempo_execucao": "tempo",
         "freq_diaria": "frequencia",
